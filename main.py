@@ -15,6 +15,7 @@ def index_message(message):
 client = WebClient("SLACK_API_KEY", timeout=10)
 
 # ID of the channel you're interested in
+# When adding this app to the Raygun workspace, we can probably index the #zendesk channel
 channel_id = "C055UUKK6F6"
 
 # Get the messages from the channel

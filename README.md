@@ -5,7 +5,8 @@ This app consists of two Python files: main.py and slash_command_handler.py. The
 To use this app, you'll need to set up a few things first.
 
 ### Slack API Setup
-1. Go to the Slack API website and click "Create a Slack App".
+Skip the first 4 steps if you're using the app in lavendarbliss test workspace
+1. Go to the Slack API website and click "Create a Slack App"
 2. Give your app a name and select a workspace to develop it in.
 3. Under the "Add features and functionality" section, select "Slash Commands" and click "Create New Command".
 4. Enter a command name (e.g. "/your-slash-command") and a short description.
@@ -42,13 +43,18 @@ The main.py script will start retrieving messages from the Slack channel and sto
 
 You can now go to Slack and type /your-slash-command (or whatever you named your command) to see the app in action. The app should respond with a greeting and the text of your command.
 
-You will also need to get ngrok running for the URL.
+You will also need to get ngrok running for the URL. Make sure that the port is avaliable that is specified in the code
+
+## Still to do
+- Get the Slash command working (if you use Request Catcher, it returns back the HTML which is great to see any response received. But using a local request URL seems to time out)
+- See if we can send a resposne back to the user (static response for now will do)
+- Send a response back based on
 
 
 ## Further Improvements
 This app is just a starting point, and there are many ways you could improve it. Here are a few ideas:
 
-Store the retrieved messages in a database (e.g. PostgreSQL) instead of memory.
-Implement a more complex response to the Slash command (e.g. interacting with an external API).
-Add error handling to the Flask server.
-Implement a user interface for the app (e.g. a web page where users can view the retrieved messages).
+- Store the retrieved messages in a database (e.g. PostgreSQL) instead of memory.
+- Implement a more complex response to the Slash command (e.g. interacting with an external API).
+- Add error handling to the Flask server.
+- Implement a user interface for the app (e.g. a web page where users can view the retrieved messages).
